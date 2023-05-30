@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "VT323", monospace;
+}
+
+#score {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  font-size: 7rem;
+}
+
+.player {
+  --position: 50;
+  background-color: white;
+  height: 10vh;
+  width: 2vh;
+  position: absolute;
+  top: calc(var(--position) * 1vh);
+  transform: translateY(-50%);
+}
+
+.p1 {
+  left: 1vw;
+}
+
+.p2 {
+  right: 1vw;
+}
+
+.ball {
+  --x: 50;
+  --y: 50;
+  background-color: white;
+  position: absolute;
+  top: calc(var(--y) * 1vh);
+  left: calc(var(--x) * 1vw);
+  height: 2vh;
+  width: 2vw;
+  transform: translate(-50%, 50%);
+}
+
+.gameover {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  align-items: center;
+  color: white;
+  font-size: 3rem;
+}
+
+.gameover button {
+  background-color: white;
+  padding: 0.5rem 1rem;
+}
